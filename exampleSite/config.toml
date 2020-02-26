@@ -1,0 +1,79 @@
+baseURL = "http://example.org/"
+languageCode = "zh-cn"
+title = "My New Hugo Site"
+defaultContentLanguage = "eu-us"
+theme = "white"
+summaryLength = 100
+hasCJKLanguage = true # 如果为true，则自动检测内容中的中文/日语/韩语。这将使.Summary和.WordCount正确行为的CJK语言。
+paginate = 6 # 分页，没做太多css处理,不建议修改
+enableEmoji = true
+
+[params]
+  title = "Title"
+  subTitle = "SubTitle"
+  author = "Your Name"
+  description = "Description"
+  record = "蜀ICP备00000000号" # 备案号
+  policeRecordProvince = "川" # 公安备案省份简称,如“川公网安备”则填"川"
+  policeRecordNumber = "000000000000000" # 公安备案号
+  linksFeedback = "交换友链请在下方留言,并将本站添加到贵站的友链中,且确保贵站支持HTTPS协议!" # 友链页面下提示文字
+
+# Valine.
+# You can get your appid and appkey from https://leancloud.cn
+# more info please open https://valine.js.org
+[params.valine]
+  enable = false #文章页面下评论是否开启
+  appId = "appId"
+  appKey = "appkey"
+  placeholder = "快来留言吧"
+  visitor = true
+  highlight = true
+  linksEnable = true # 友链下评论开启
+
+# 图标采用fontawesome(http://www.fontawesome.com.cn/faicons/)
+# key = value key与图标名相同
+[social]
+  github-alt = "https://github.com/<github名>"
+  qq = "tencent://Message/?Uin=<QQ号>&amp;websiteName=q-zone.qq.com&amp;Menu=yes"
+  television = "bilibili地址"
+  envelope-o = "mailto:<邮箱>"
+
+# 菜单 根据自己需求修改名称
+[[menu.main]]
+  identifier = "welcome"
+  name = "Welcome"
+  weight = "10"
+  url = "/"
+[[menu.main]]
+  identifier = "home"
+  name = "Home"
+  weight = "20"
+  url = "/posts"
+[[menu.main]]
+  identifier = "about"
+  name = "About me"
+  weight = "30"
+  url = "/about"
+[[menu.main]]
+  identifier = "links"
+  name = "Links"
+  weight = "40"
+  url = "/links"
+
+# 友链
+[[menu.links]]
+ identifier = "Links1"
+ name = "Links1"
+ url = "https://css0209.cn/"
+[[menu.links]]
+ identifier = "Links2"
+ name = "Links2"
+ url = "https://gohugo.io/"
+[[menu.links]]
+ identifier = "Links3"
+ name = "Links3"
+ url = "https://github.com/"
+[[menu.links]]
+ identifier = "Links4"
+ name = "Links4"
+ url = "https://gohugo.io/"

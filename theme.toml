@@ -3,9 +3,9 @@
 
 name = "White"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
+licenselink = "https://github.com/PaleBlueYk/hugo-theme-white/blob/master/LICENSE"
 description = "Extreme simplicity"
-homepage = "http://example.com/"
+homepage = "https://github.com/PaleBlueYk/hugo-theme-white"
 tags = ["blog","simple","white"]
 features = ["simple","white"]
 min_version = "0.64.1"
