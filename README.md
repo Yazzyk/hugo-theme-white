@@ -37,13 +37,13 @@ enableEmoji = true
 # You can get your appid and appkey from https://leancloud.cn
 # more info please open https://valine.js.org
 [params.valine]
-  enable = false #文章页面下评论是否开启 默认关闭
-  appId = "appId"
-  appKey = "appkey"
-  placeholder = "快来留言吧"
-  visitor = true
-  highlight = true
-  linksEnable = true # 友链下评论是否开启开启
+  enable = false              # 文章页面下评论是否开启 默认关闭
+  appId = "appId"             # appId
+  appKey = "appkey"           # appkey
+  placeholder = "快来留言吧"    # 留言板上
+  visitor = true              # 不修改
+  highlight = true            # 不修改
+  linksEnable = true          # 友链下评论是否开启开启
 
 # 图标采用fontawesome(http://www.fontawesome.com.cn/faicons/)
 # key = value key与图标名相同
