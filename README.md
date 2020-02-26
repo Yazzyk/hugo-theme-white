@@ -23,13 +23,13 @@ paginate = 6 # 分页，没做太多css处理,不建议修改
 enableEmoji = true
 
 [params]
-  title = "Title" 网站title
-  subTitle = "SubTitle" 网站副标题
-  author = "Your Name" 你的ID
-  description = "Description" 网站描述
-  record = "蜀ICP备00000000号" # 备案号
-  policeRecordProvince = "川" # 公安备案省份简称,如“川公网安备”则填"川"
-  policeRecordNumber = "000000000000000" # 公安备案号
+  title = "Title"                         # 网站title
+  subTitle = "SubTitle"                   # 网站副标题
+  author = "Your Name"                    # 你的ID
+  description = "Description"             # 网站描述
+  record = "蜀ICP备00000000号"             # 备案号
+  policeRecordProvince = "川"             # 公安备案省份简称,如“川公网安备”则填"川"
+  policeRecordNumber = "000000000000000"  # 公安备案号
   linksFeedback = "交换友链请在下方留言,并将本站添加到贵站的友链中,且确保贵站支持HTTPS协议!" # 友链页面下提示文字
 
 # 评论系统
