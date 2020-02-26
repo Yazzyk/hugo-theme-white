@@ -69,6 +69,7 @@ html, body {
   padding: 3px 8px;
   transition: all .2s linear;
   z-index: 2;
+  overflow: hidden;
 }
 
 .linkBox:hover {

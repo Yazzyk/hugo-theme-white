@@ -1,5 +1,8 @@
 prev_page:
-  other: "Prev"
+  other: "Previous"
 
 next_page:
-  other: "Next"
+  other: "Next Page"
+
+enter:
+  other: "Enter"

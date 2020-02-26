@@ -4,7 +4,7 @@
 name = "White"
 license = "MIT"
 licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
-description = ""
+description = "Extreme simplicity"
 homepage = "http://example.com/"
 tags = ["blog","simple","white"]
 features = ["simple","white"]

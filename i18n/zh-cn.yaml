@@ -3,3 +3,6 @@ prev_page:
 
 next_page:
   other: "下一页"
+
+enter:
+  other: "进入"
