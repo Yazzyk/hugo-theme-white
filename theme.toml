@@ -1,0 +1,15 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "White"
+license = "MIT"
+licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
+description = ""
+homepage = "http://example.com/"
+tags = ["blog","simple","white"]
+features = ["simple","white"]
+min_version = "0.64.1"
+
+[author]
+  name = "PaleBlueYk"
+  homepage = "https://css0209.cn"

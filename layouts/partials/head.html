@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ .Site.Title }}</title>
+  <meta name="author" content="{{ if .Site.Params.Author }}{{ .Site.Params.Author | safeHTML }}{{ end }}" />
+  {{ if .Description }}
+  <meta name="description" content="{{ .Description | safeHTML }}" />
+  {{ else if .IsPage }}
+  <meta name="description" content="{{ .Summary | plainify }}" />
+  {{ else if .Site.Params.description }}
+  <meta name="description" content="{{ .Site.Params.description | safeHTML }}" />
+  {{ end }}
+  <link rel="shortcut icon" href="{{ "/img/favicon.ico" |absURL }}" type="image/x-icon">
+  <link rel="stylesheet" href="{{ "/css/white.css" |absURL }}">
+  <link rel="stylesheet" href="{{ "/css/font-awesome.min.css" |absURL }}">
+  <link rel="stylesheet" href="{{"/css/highlight.css" |absURL}}">
+  <script src="{{"/js/heighlight.min.js" | absURL }}"></script>
+  <!-- custom css -->
+  {{ range .Site.Params.customCSS }}
+  <link rel="stylesheet" href="{{ "css/" | absURL }}{{ . }}">
+  {{ end }}
+  <!-- js -->
+  <script src="{{"/js/jQuery.min.js" |absURL}}"></script>
+  <script src="{{"/js/lodash.js" |absURL}}"></script>

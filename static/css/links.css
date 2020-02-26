@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+.linksContent{
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.linksContent .linkBox{
+  width: 200px;
+  font-size: 12px;
+  font-weight: 200;
+  margin: 20px 10px;
+}
+
+.links{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

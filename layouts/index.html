@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ .Site.Title }}</title>
+  <link rel="shortcut icon" href="{{"img/favicon.ico" |absURL}}" type="image/x-icon">
+  <link rel="stylesheet" href="{{ "css/index.css" |absURL }}">
+  <link rel="stylesheet" href="{{ "css/font-awesome.min.css" |absURL }}">
+</head>
+
+<body>
+  <div class="mainBox">
+    <h1 class="title">
+      {{ if .Site.Params.Title }}
+      {{.Site.Params.Title}}
+      {{ else }}
+      Welcome to My Blog
+      {{ end }}
+    </h1>
+    <h4 class="subTitle">
+      {{ if .Site.Params.SubTitle }}
+      {{.Site.Params.SubTitle}}
+      {{ else }}
+      Don't Be So Serious
+      {{ end }}
+    </h4>
+    <div class="socials">
+      {{ range $key,$value := .Site.Social }}
+      {{ if ne $value "" }}
+      <a href="{{ $value }}" title="{{ $key }}" target="_blank"><i class="fa fa-{{ $key }}" aria-hidden="true"></i></a>
+      {{ end }}
+      {{ end }}
+    </div>
+    <div class="btn">
+      <a class="toHome" href="/posts/">进入</a>
+    </div>
+  </div>
+</body>
+
+</html>

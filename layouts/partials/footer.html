@@ -1,0 +1,19 @@
+<footer>
+  <div class="leftBox">
+    <span>Theme Designed by <a href="https://css0209.cn" target="_blank">PaleBlueYk</a></span><br />
+    <span>Proudly published with <a href="https://gohugo.io" target="_blank">Hugo</a></span>
+  </div>
+  <div class="rightBox">
+    <span>Copyright © 2020-{{ now.Format "2006.01" }} <a href="{{.Site.BaseURL}}">{{ .Site.Params.author }}</a> All Rights Reserved</span><br />
+    {{ if .Site.Params.record }}
+    <span><a href="http://www.beian.miit.gov.cn/" target="_blank">{{ .Site.Params.record }}</a></span><br />
+    {{ end }}
+    {{ if (and .Site.Params.policeRecordNumber .Site.Params.policeRecordProvince)}}
+    <span>
+      <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode={{.Site.Params.policeRecordNumber}}" target="_blank">
+        <img class="beian" src="{{"/img/beian.png"|absURL}}" alt="">{{.Site.Params.policeRecordProvince}}公网安备 {{.Site.Params.policeRecordNumber}}号
+      </a>
+    </span>
+    {{ end }}
+  </div>
+</footer>

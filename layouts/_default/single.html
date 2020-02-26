@@ -1,0 +1,44 @@
+{{ partial "head.html" . }}
+</head>
+<body>
+  {{ partial "menu.html" . }}
+  <div class="main">
+    <div class="postContent">
+      <h1>{{ .Title }}</h1>
+      <small><i class="fa fa-clock-o" aria-hidden="true"></i>{{.Date.Format "2006-01-02"}}
+        {{.Site.Params.author}}</small>
+      {{.Content}}
+      <div class="postFooter">
+        {{ with .Params.tags  }}
+        {{ range . }}
+        <small class="tags">
+          <i class="fa fa-tag" aria-hidden="true"></i>{{.}}
+        </small>
+        {{ end }}
+        {{ end }}
+      </div>
+      <div>
+        <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh"><img alt="知识共享许可协议"
+            style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+        <ul class="post-copyright">
+          <li class="post-copyright-link"><strong>本文链接：</strong> <a href="{{.RelPermalink}}" title="{{.Title}} "
+              class="line">{{.Title}}</a></li>
+          <li class="post-copyright-license"><strong>版权声明：</strong> 本<span xmlns:dct="http://purl.org/dc/terms/"
+              href="http://purl.org/dc/dcmitype/Text" rel="dct:type">作品</span>由<span
+              xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">{{.Site.Params.author}}</span>采用<a
+              rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh">知识共享署名-非商业性使用 4.0
+              国际许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://css0209.cn"
+              rel="dct:source">{{.Site.Title}}</a>上的作品创作。转载请注明出处！</li>
+        </ul>
+      </div>
+      <!-- Valine 评论系统 -->
+      {{ if .Site.Params.valine.enable }}
+      {{ partial "comments.html" . }}
+      {{ end }}
+    </div>
+  </div>
+  {{ partial "footer.html" . }}
+</body>
+<!-- js -->
+<script src="{{"/js/list.js" | absURL}}"></script>
+<script src="{{"/js/post.js" | absURL}}"></script>

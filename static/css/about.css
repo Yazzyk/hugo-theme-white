@@ -1,0 +1,13 @@
+.about_content{
+  font-size: 15px;
+}
+
+strong{
+  font-weight: 400;
+  background-color: #ccc;
+}
+
+.about_content img{
+  border-radius: 50%;
+  width: 400px;
+}

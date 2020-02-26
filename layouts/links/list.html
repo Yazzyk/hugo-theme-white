@@ -1,0 +1,27 @@
+{{ partial "head.html" . }}
+<link rel="stylesheet" href="{{ "/css/links.css" }}">
+</head>
+
+<body>
+  {{ partial "menu.html" . }}
+  <div class="main">
+    <div class="linksContent">
+      <h1>友链</h1>
+      {{.Content}}
+      <div class="links">
+        {{ range .Site.Menus.links }}
+        <a href="{{ .URL }}" class="linkBox">{{ .Name }}</a>
+        {{ end }}
+      </div>
+      <h3>{{ .Site.Params.linksFeedback }}</h3>
+      <!-- Valine 评论系统 -->
+      {{ if .Site.Params.valine.linksEnable }}
+      {{ partial "comments.html" . }}
+      {{ end }}
+    </div>
+  </div>
+  {{ partial "footer.html" . }}
+</body>
+<!-- js -->
+<script src="{{"/js/list.js" | absURL}}"></script>
+<script src="{{"/js/post.js" | absURL}}"></script>

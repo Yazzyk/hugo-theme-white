@@ -1,0 +1,3 @@
+function toggleMenus(){
+  $("ul").toggle();
+}
