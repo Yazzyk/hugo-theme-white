@@ -1,6 +1,9 @@
 # Hugo主题：白(White)
 和它的名字一样,这个主题很白,当然,它也非常简约。  
 预览：[Demo](https://css0209.cn)
+# 截图
+[![](./images/white_welcome.png)](./images/white_welcome.png)
+[![](./images/white_post_list.png)](./images/white_post_list.png)
 # 下载安装
 ```bash
 cd YourBlogRootDir
