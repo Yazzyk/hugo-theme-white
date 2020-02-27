@@ -7,7 +7,7 @@
 # 下载安装
 ```bash
 cd YourBlogRootDir
-git clone https://github.com/PaleBlueYk/hugo-theme-white.git themes/White
+git submodule add https://github.com/PaleBlueYk/hugo-theme-white.git themes/White
 ```
 # 使用
 首先复制`exampleSite/content`文件夹和`exampleSite/archetypes`到你的博客根目录覆盖原文件

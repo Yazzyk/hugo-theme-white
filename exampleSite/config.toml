@@ -2,7 +2,7 @@ baseURL = "http://example.org/"
 languageCode = "zh-cn"
 title = "My New Hugo Site"
 defaultContentLanguage = "eu-us"
-theme = "white"
+theme = "White"
 summaryLength = 100
 hasCJKLanguage = true # 如果为true，则自动检测内容中的中文/日语/韩语。这将使.Summary和.WordCount正确行为的CJK语言。
 paginate = 6 # 分页，没做太多css处理,不建议修改
@@ -15,7 +15,7 @@ enableEmoji = true
   description = "Description"
   record = "蜀ICP备00000000号" # 备案号
   policeRecordProvince = "川" # 公安备案省份简称,如“川公网安备”则填"川"
-  policeRecordNumber = "000000000000000" # 公安备案号
+  policeRecordNumber = "000000000000000" # 公安备案号 ，没有则注释或删除
   linksFeedback = "交换友链请在下方留言,并将本站添加到贵站的友链中,且确保贵站支持HTTPS协议!" # 友链页面下提示文字
 
 # Valine.
