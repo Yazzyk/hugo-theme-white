@@ -14,6 +14,7 @@ enableEmoji = true
   author = "Your Name"
   description = "Description"
   keywords = "keywords"
+  googleSiteVerification = "googleSiteVerification"
   record = "蜀ICP备00000000号" # 备案号
   policeRecordProvince = "川" # 公安备案省份简称,如“川公网安备”则填"川"
   policeRecordNumber = "000000000000000" # 公安备案号 ，没有则注释或删除

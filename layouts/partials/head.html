@@ -14,6 +14,8 @@
   <meta name="description" content="{{ .Site.Params.description | safeHTML }}" />
   {{ end }}
   <meta name="keywords" content="{{ .Site.Params.keywords }}">
+  <meta name="baidu-site-verification" content="{{ .Site.Params.seo.baidu }}" />
+  <meta name="google-site-verification" content="{{ .Site.Params.googleSiteVerification }}" />
   <link rel="shortcut icon" href="{{ "/img/favicon.png" |absURL }}" type="image/x-icon">
   <link rel="stylesheet" href="{{ "/css/white.css" |absURL }}">
   <link rel="stylesheet" href="{{ "/css/font-awesome.min.css" |absURL }}">
