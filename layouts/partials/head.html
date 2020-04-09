@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ if .IsHome }}{{ .Title }}{{ else }}{{ .Title }} &middot; {{ .Site.Title }}{{ end }}</title>
+  <title>{{ .Site.Title }}</title>
   <meta name="author" content="{{ if .Site.Params.Author }}{{ .Site.Params.Author | safeHTML }}{{ end }}" />
   {{ if .Description }}
   <meta name="description" content="{{ .Description | safeHTML }}" />
@@ -13,13 +13,7 @@
   {{ else if .Site.Params.description }}
   <meta name="description" content="{{ .Site.Params.description | safeHTML }}" />
   {{ end }}
-  {{ if .Keywords }}
-  {{ $length := len .Keywords | add -1 }}
-  <meta name="keywords" content="{{ range $index, $element := .Keywords }}{{ $element | safeHTML }}{{ if ne $index $length }}, {{ end }}{{ end }}"/>
-  {{ else if .Site.Params.keywords }}
-  {{ $length := len .Site.Params.keywords | add -1 }}
-  <meta name="keywords" content="{{ range $index, $element := .Site.Params.keywords }}{{ $element | safeHTML }}{{ if ne $index $length }}, {{ end }}{{ end }}"/>
-  {{ end }}
+  <meta name="keywords" content="{{ .Site.Params.keywords }}">
   <link rel="shortcut icon" href="{{ "/img/favicon.png" |absURL }}" type="image/x-icon">
   <link rel="stylesheet" href="{{ "/css/white.css" |absURL }}">
   <link rel="stylesheet" href="{{ "/css/font-awesome.min.css" |absURL }}">
