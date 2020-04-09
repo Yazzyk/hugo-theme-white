@@ -13,7 +13,7 @@
   {{ else if .Site.Params.description }}
   <meta name="description" content="{{ .Site.Params.description | safeHTML }}" />
   {{ end }}
-  <link rel="shortcut icon" href="{{ "/img/favicon.ico" |absURL }}" type="image/x-icon">
+  <link rel="shortcut icon" href="{{ "/img/favicon.png" |absURL }}" type="image/x-icon">
   <link rel="stylesheet" href="{{ "/css/white.css" |absURL }}">
   <link rel="stylesheet" href="{{ "/css/font-awesome.min.css" |absURL }}">
   <link rel="stylesheet" href="{{"/css/highlight.css" |absURL}}">
@@ -25,3 +25,4 @@
   <!-- js -->
   <script src="{{"/js/jQuery.min.js" |absURL}}"></script>
   <script src="{{"/js/lodash.js" |absURL}}"></script>
+  <link rel="stylesheet" href="{{ "/css/main.css" |absURL }}">
