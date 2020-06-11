@@ -1,8 +1,9 @@
 .hljs {
   display: block;
   overflow-x: auto;
-  padding: .5em;
-  background: #F0F0F0
+  padding: 1rem;
+  background: #fff;
+  border-radius: 8px;
 }
 
 .hljs, .hljs-subst {
