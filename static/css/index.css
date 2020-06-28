@@ -2,7 +2,7 @@ html,
 body {
   min-width: calc(100vw);
   min-height: calc(100vh);
-  background-color: #e3e3e3;
+  background-color: #f5f5f5;
   padding: 0;
   margin: 0;
 }
@@ -29,17 +29,17 @@ body {
   z-index: 10;
   margin: 10px auto;
   border-radius: 20px;
-  background: linear-gradient(145deg, #f3f3f3, #cccccc);
-  box-shadow:  15px 15px 30px #c1c1c1, 
-               -15px -15px 30px #ffffff;
+  background: linear-gradient(145deg, #ffffff, #dddddd);
+  box-shadow:  22px 22px 32px #d0d0d0, 
+               -22px -22px 32px #ffffff;
 }
 
-.toHome:hover {
+.toHome:active {
   color: #666;
   border-radius: 20px;
-  background: #e3e3e3;
-  box-shadow: inset 15px 15px 30px #c1c1c1, 
-              inset -15px -15px 30px #ffffff;
+  background: #f5f5f5;
+  box-shadow: inset 22px 22px 32px #d0d0d0, 
+              inset -22px -22px 32px #ffffff;
 }
 
 
