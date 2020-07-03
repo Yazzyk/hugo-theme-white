@@ -413,8 +413,9 @@ blockquote:before {
   }
 
   .nav .linkBox {
-    color: #fff;
+    color: #000;
     transition: .1s;
+    box-shadow: none;
   }
 
   .nav .linkBox:hover {
