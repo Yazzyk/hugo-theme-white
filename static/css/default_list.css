@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+.tagsContent{
+  margin: 30px auto;
+  padding: 20px 80px;
+}
+
+.listing_post{
+  margin-top: 10px;
+}
+
+.listing_post a {
+  color: #000;
+  text-decoration: none;
+  transition: .5s;
+}
+
+.listing_post a:hover{
+  color: #666;
+}
+
+.listing_title{
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.post_time{
+  float: right;
+  display: inline-block;
+}
+
+.post_time::after{
+  content: '';
+  display: block;
+  clear: both;
+}

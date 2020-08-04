@@ -1,0 +1,45 @@
+{{ partial "head.html" . }}
+</head>
+<body>
+  {{ partial "menu.html" . }}
+  <div class="main">
+    <div class="postList">
+      {{ $paginator := .Paginate (where .Pages "Type" "posts") }}
+      {{ range $paginator.Pages }}
+      <div class="listBox">
+        <h3><a href="{{.RelPermalink}}">{{.Title}}</a></h3>
+        <p>{{.Summary}}...</p>
+        <div class="listFooter">
+          <span class="date">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>{{.Date.Format "2006-01-02"}}
+          </span>
+          {{ with .Params.tags  }}
+          {{ range . }}
+          <span class="tags">
+            <i class="fa fa-tag" aria-hidden="true"></i>{{.}}
+          </span>
+          {{ end }}
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+    <div class="pagination">
+      {{ if or ($paginator.HasPrev) ($paginator.HasNext) }}
+      {{ if $paginator.HasPrev }}
+      <a href="{{$paginator.Prev.URL}}" class="pre linkBox">
+        {{ i18n "prev_page" }}
+      </a>
+      {{ end }}
+      {{ if $paginator.HasNext }}
+      <a href="{{$paginator.Next.URL}}" class="next linkBox">
+        {{ i18n "next_page" }}
+      </a>
+      {{ end }}
+      {{ end }}
+    </div>
+  </div>
+  {{ partial "footer.html" . }}
+</body>
+<!-- js -->
+<script src="{{"/js/list.js" | absURL}}"></script>

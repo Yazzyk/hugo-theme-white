@@ -1,42 +1,28 @@
 {{ partial "head.html" . }}
+<link rel="stylesheet" href="{{ "/css/default_list.css" }}">
 </head>
+
 <body>
   {{ partial "menu.html" . }}
   <div class="main">
-    <div class="postList">
-      {{ $paginator := .Paginate (where .Pages "Type" "posts") }}
-      {{ range $paginator.Pages }}
-      <div class="listBox">
-        <h3><a href="{{.RelPermalink}}">{{.Title}}</a></h3>
-        <p>{{.Summary}}...</p>
-        <div class="listFooter">
-          <span class="date">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>{{.Date.Format "2006-01-02"}}
-          </span>
-          {{ with .Params.tags  }}
-          {{ range . }}
-          <span class="tags">
-            <i class="fa fa-tag" aria-hidden="true"></i>{{.}}
-          </span>
-          {{ end }}
+    <div class="tagsContent">
+      <div class="page_tags">
+        {{ range .Data.Pages.GroupByDate "2006" }}
+        <div class="listing_title">{{ .Key }}</div>
+        <div class="listing">
+          {{ range .Pages }}
+          <div class="listing_item">
+            <div class="listing_post">
+              <a href="{{ .RelPermalink }}">{{ .Title }}
+                <div class="post_time"><span class="date">{{ .Date.Format "01-02" }}</span></div>
+              </a>
+            </div>
+          </div>
           {{ end }}
         </div>
+        {{ end }}
       </div>
-      {{ end }}
-    </div>
-    <div class="pagination">
-      {{ if or ($paginator.HasPrev) ($paginator.HasNext) }}
-      {{ if $paginator.HasPrev }}
-      <a href="{{$paginator.Prev.URL}}" class="pre linkBox">
-        {{ i18n "prev_page" }}
-      </a>
-      {{ end }}
-      {{ if $paginator.HasNext }}
-      <a href="{{$paginator.Next.URL}}" class="next linkBox">
-        {{ i18n "next_page" }}
-      </a>
-      {{ end }}
-      {{ end }}
+
     </div>
   </div>
   {{ partial "footer.html" . }}

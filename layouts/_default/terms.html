@@ -9,14 +9,12 @@
       <div class="page_tags">
         <ul>
             {{ $data := .Data }}
-            {{ range $key, $value := .Data.Terms.ByCount }}
-            {{ if ($value.Name) }}
+            {{ range .Site.Taxonomies.tags }}
             <li>
-                <a href="{{ $data.Plural | absURL }}/{{ $value.Name | urlize }}">
-                    {{ $value.Name }} <span class="terms_count">{{ $value.Count }}</span>
+                <a href="{{ .Page.Permalink }}">
+                    {{ .Page.Title }} <span class="terms_count">{{ .Count }}</span>
                 </a>
             </li>
-            {{ end }}
             {{ end }}
         </ul>
     </div>

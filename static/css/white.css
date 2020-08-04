@@ -86,6 +86,7 @@ body {
 }
 
 .header {
+  margin-top: 15px;
   width: calc(100ch);
   margin: 0px auto;
 }
@@ -432,13 +433,15 @@ blockquote:before {
   }
 
   .logo {
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 55px;
+    margin-left: -15px;
   }
 
   .header {
     width: calc(97vw);
     text-align: center;
+    margin-top: 15px;
   }
 
   .header div {
