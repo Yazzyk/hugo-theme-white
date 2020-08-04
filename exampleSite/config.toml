@@ -57,9 +57,14 @@ enableEmoji = true
   weight = "30"
   url = "/about"
 [[menu.main]]
+  url = "/tags"
+  name = "Tags"
+  weight = "40"
+  identifier = "tags"
+[[menu.main]]
   identifier = "links"
   name = "Links"
-  weight = "40"
+  weight = "50"
   url = "/links"
 
 # 友链
