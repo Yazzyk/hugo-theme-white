@@ -1,4 +1,4 @@
-$('.button--bubble').each(function() {
+$('.button--bubble').each(function () {
   var $circlesTopLeft = $(this).parent().find('.circle.top-left');
   var $circlesBottomRight = $(this).parent().find('.circle.bottom-right');
 
@@ -17,7 +17,7 @@ $('.button--bubble').each(function() {
 
   var tlBt1 = new TimelineLite();
   var tlBt2 = new TimelineLite();
-  
+
   tlBt1.set($circlesTopLeft, { x: 0, y: 0, rotation: -45 });
   tlBt1.add(tl);
 
@@ -29,7 +29,7 @@ $('.button--bubble').each(function() {
   tl2.to($circlesBottomRight.eq(0), 1, { scale: 0, x: '+=5', y: '+=15', opacity: 0 });
   tl2.to($circlesBottomRight.eq(1), 1, { scale: 0.4, x: '+=7', y: '+=7', opacity: 0 }, '-=1');
   tl2.to($circlesBottomRight.eq(2), 1, { scale: 0, x: '+=15', y: '-=5', opacity: 0 }, '-=1');
-  
+
   tlBt2.set($circlesBottomRight, { x: 0, y: 0, rotation: 45 });
   tlBt2.add(tl2);
 
@@ -40,7 +40,7 @@ $('.button--bubble').each(function() {
 
   btTl.timeScale(2.6);
 
-  $(this).on('mouseover', function() {
+  $(this).on('mouseover', function () {
     btTl.restart();
   });
 });

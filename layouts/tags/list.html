@@ -1,0 +1,28 @@
+{{ partial "head.html" . }}
+<link rel="stylesheet" href="{{ "/css/tags.css" }}">
+</head>
+
+<body>
+  {{ partial "menu.html" . }}
+  <div class="main">
+    <div class="tagsContent">
+      <div class="page_tags">
+        <ul>
+            {{ $data := .Data }}
+            {{ range $key, $value := .Data.Terms.ByCount }}
+            {{ if ($value.Name) }}
+            <li>
+                <a href="{{ $data.Plural | absURL }}/{{ $value.Name | urlize }}">
+                    {{ $value.Name }} <span class="terms_count">{{ $value.Count }}</span>
+                </a>
+            </li>
+            {{ end }}
+            {{ end }}
+        </ul>
+    </div>
+    </div>
+  </div>
+  {{ partial "footer.html" . }}
+</body>
+<!-- js -->
+<script src="{{"/js/list.js" | absURL}}"></script>
