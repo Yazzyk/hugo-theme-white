@@ -2,7 +2,7 @@
   <div class="logoBox">
     <a href="/posts"><img src="{{ "/img/logo.png" }}" alt="" class="logo"></a>
   </div>
-  <button class="bars" onclick="toggleMenus()"><i class="fa fa-bars" aria-hidden="true"></i></button>
+  <!-- <button class="bars" onclick="toggleMenus()"><i class="fa fa-bars" aria-hidden="true"></i></button> -->
   <ul>
     {{ $currentPage := . }}
     {{ range .Site.Menus.main }}
@@ -20,11 +20,8 @@
   </div>
   <div class="socials">
     <div class="socialLinks">
-      {{ range $key,$value := .Site.Social }}
-      {{ if ne $value "" }}
-      <a href="{{ $value |safeURL}}" title="{{ $key }}" target="_blank"><i class="fa fa-{{ $key }}"
-          aria-hidden="true"></i></a>
-      {{ end }}
+      {{ range .Site.Params.Social }}
+      <a href="{{ .Link }}" target="_blank"><i class="{{ .Icon }}" aria-hidden="true"></i></a>
       {{ end }}
     </div>
   </div>

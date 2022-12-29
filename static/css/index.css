@@ -26,20 +26,35 @@ body {
   padding: 5px 10px;
   transition: all .2s linear;
   position: relative;
-  z-index: 10;
+  z-index: 99;
   margin: 10px auto;
-  border-radius: 20px;
-  background: linear-gradient(145deg, #ffffff, #dddddd);
-  box-shadow:  22px 22px 32px #d0d0d0, 
-               -22px -22px 32px #ffffff;
+  border-radius: 4px;
+  border: 1px solid;
 }
 
-.toHome:active {
-  color: #666;
-  border-radius: 20px;
-  background: #f5f5f5;
-  box-shadow: inset 22px 22px 32px #d0d0d0, 
-              inset -22px -22px 32px #ffffff;
+.toHome::after {
+  z-index: -1;
+  content: '';
+  display: block;
+  position: relative;
+  left: -10px;
+  top: -35px;
+  width: 0;
+  height: 100%;
+  padding: 5px 0px;
+  color: #fff;
+  background-color: #000;
+  border-radius: 4px;
+  transition: .4s;
+}
+
+.toHome:hover {
+  color: #fff;
+}
+
+.toHome:hover::after {
+  width: 100%;
+  padding: 5px 10px;
 }
 
 

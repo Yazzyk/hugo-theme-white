@@ -33,22 +33,14 @@ li a{
   transition: all .2s linear;
   z-index: 2;
   overflow: hidden;
-  border-radius: 20px;
-  background: linear-gradient(145deg, #ffffff, #e6e6e6);
-  box-shadow:  22px 22px 32px #d9d9d9, 
-             -22px -22px 32px #ffffff;
-}
-
-li a:active {
-  color: #666;
-  border-radius: 20px;
-  background: #ffffff;
-  box-shadow: inset 20px 20px 60px #d9d9d9, 
-              inset -20px -20px 60px #ffffff;
+  border: 1px solid #efefef;
+  border-radius: 3px;
+  /* background: linear-gradient(145deg, #ffffff, #e6e6e6); */
+  box-shadow:  10px 10px 15px #d9d9d9;
 }
 
 li a:hover{
-  color: #666;
+  box-shadow:  5px 5px 10px #d9d9d9;
 }
 
 .terms_count{
@@ -64,4 +56,25 @@ li a:hover{
   border-radius: 50%;
   text-align: center;
   line-height: 12px;
+}
+
+@media (max-width: 768px) {
+  .tagsContent {
+    padding: 0;
+    margin: 0;
+  }
+  .page_tags ul {
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  .page_tags ul li {
+    width: 120px;
+    margin: 5px;
+    margin-top: 30px;
+  }
+  .page_tags ul li a {
+    width: 100px;
+    margin: 0;
+  }
 }
