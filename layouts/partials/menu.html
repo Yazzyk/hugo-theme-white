@@ -1,6 +1,45 @@
 <div class="nav">
   <div class="logoBox">
-    <a href="/posts"><img src="{{ "/img/logo.png" }}" alt="" class="logo"></a>
+    <canvas id="logoCanvas" width="100" height="70" style="cursor: pointer;"></canvas>
+    <script>
+        const canvas = document.getElementById('logoCanvas');
+        const ctx = canvas.getContext('2d');
+        let showCursor = true;
+
+        function drawLogo() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            ctx.font = 'bold 38px Arial';
+            ctx.fillStyle = '#000';
+            ctx.fillText('>', 0, 40);
+            ctx.fillText('Y', 25, 40);
+            ctx.fillText('K', 48, 40);
+
+            ctx.font = '30px Arial';
+            ctx.fillStyle = '#000';
+            
+            if (showCursor) {
+                ctx.fillRect(78, 40, 15, 2);
+            }
+
+            ctx.font = '20px Arial';
+            ctx.fillText('shroot.dev', 0, 65);
+        }
+
+        function animateCursor() {
+            showCursor = !showCursor;
+            drawLogo();
+        }
+
+        function redirectToShrootDev() {
+            window.location.href = 'https://shroot.dev';
+        }
+
+        canvas.addEventListener('click', redirectToShrootDev);
+
+        drawLogo();
+        setInterval(animateCursor, 500);
+    </script>
   </div>
   <!-- <button class="bars" onclick="toggleMenus()"><i class="fa fa-bars" aria-hidden="true"></i></button> -->
   <ul>

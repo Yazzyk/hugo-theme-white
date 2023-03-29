@@ -2,12 +2,11 @@
   display: block;
   overflow-x: auto;
   padding: 1rem;
-  background: #fff;
-  border-radius: 8px;
+  background: rgb(51, 51, 51);
 }
 
 .hljs, .hljs-subst {
-  color: #444
+  color: rgb(255, 255, 255)
 }
 
 .hljs-comment {
@@ -19,11 +18,11 @@
 }
 
 .hljs-type, .hljs-string, .hljs-number, .hljs-selector-id, .hljs-selector-class, .hljs-quote, .hljs-template-tag, .hljs-deletion {
-  color: #880000
+  color: #3fd47d
 }
 
 .hljs-title, .hljs-section {
-  color: #880000;
+  color: #5b4c4c;
   font-weight: bold
 }
 

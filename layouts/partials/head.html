@@ -19,19 +19,20 @@
   <link rel="shortcut icon" href="{{ "/img/favicon.png" |absURL }}" type="image/x-icon">
   <link rel="stylesheet" href="{{ "/css/white.css" |absURL }}">
   <!-- <link rel="stylesheet" href="{{ "/css/font-awesome.min.css" |absURL }}" media="none" onload="this.media='all'"> -->
-  <!-- <link rel="stylesheet" href="{{"/css/highlight.css" |absURL}}" media="none" onload="this.media='all'">
-  <script src="{{"/js/heighlight.min.js" | absURL }}"></script> -->
+  <!-- <link rel="stylesheet" href="{{"/css/highlight.css" |absURL}}" media="none" onload="this.media='all'"> -->
+  <script src="{{"/js/heighlight.min.js" | absURL }}"></script>
   <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
   <!-- custom css -->
   {{ range .Site.Params.customCSS }}
   <link rel="stylesheet" href="{{ "css/" | absURL }}{{ . }}">
   {{ end }}
   <!-- js -->
-  <script src="{{"/js/jQuery.min.js" |absURL}}" async="async"></script>
-  <script src="{{"/js/lodash.js" |absURL}}" async="async"></script>
+  <script src="{{"/js/jQuery.min.js" |absURL}}"></script>
+  <script src="{{"/js/lodash.js" |absURL}}"></script>
   <script src="{{ "/js/baidu.js" |absURL }}" async="async"></script>
   <!-- <script type="text/javascript" src="{{ "/js/console.js" |absURL }}" async="async"></script> -->
   <link rel="stylesheet" href="{{ "/css/main.css" |absURL }}">
+  <link rel="stylesheet" href="{{ "/css/code-fense.css" |absURL }}">
   <!-- <link rel="stylesheet"
       href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css" media="none" onload="this.media='all'">
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js" async="async"></script> -->

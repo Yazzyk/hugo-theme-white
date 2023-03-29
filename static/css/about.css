@@ -11,3 +11,16 @@ strong{
   border-radius: 50%;
   width: 400px;
 }
+
+table {
+  border-collapse: collapse;
+  width: auto;
+}
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #f2f2f2;
+}

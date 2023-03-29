@@ -8,6 +8,6 @@ _($('.postContent img')).forEach((imgs)=>{
   })
 })
 
-$("pre").attr("style","");
-$("pre code").addClass("hljs");
-$("span").attr("style","");
+// $("pre").attr("style","");
+// $("pre code").addClass("hljs");
+// $("span").attr("style","");
