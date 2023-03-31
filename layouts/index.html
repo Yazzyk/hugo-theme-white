@@ -7,55 +7,57 @@
   <title>{{ .Site.Title }}</title>
   <link rel="shortcut icon" href="{{"img/favicon.png" |absURL}}" type="image/x-icon">
   <link rel="stylesheet" href="{{ "css/index.css" |absURL }}">
-  <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet"  media="none" onload="this.media='all'">
+  <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" media="none"
+    onload="this.media='all'">
   <link rel="stylesheet" href="{{ "css/main.css" |absURL }}" media="none" onload="this.media='all'">
   <meta name="description" content="{{ .Site.Params.description }}">
   <meta name="keywords" content="{{ .Site.Params.keyworlds }}">
   <meta name="baidu-site-verification" content="{{ .Site.Params.seo.baidu }}" />
   <meta name="google-site-verification" content="{{ .Site.Params.seo.googleSiteVerification }}" />
+  <script type="text/javascript" src="{{"js/bg.js" | absURL}}" async="async"></script>
 </head>
 
 <body>
   <div class="mainBox">
     <canvas id="logoCanvas" width="100" height="70" style="cursor: pointer;"></canvas>
     <script>
-        const canvas = document.getElementById('logoCanvas');
-        const ctx = canvas.getContext('2d');
-        let showCursor = true;
+      const canvas = document.getElementById('logoCanvas');
+      const ctx = canvas.getContext('2d');
+      let showCursor = true;
 
-        function drawLogo() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+      function drawLogo() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-            ctx.font = 'bold 38px Arial';
-            ctx.fillStyle = '#000';
-            ctx.fillText('>', 0, 40);
-            ctx.fillText('Y', 25, 40);
-            ctx.fillText('K', 48, 40);
+        ctx.font = 'bold 38px Arial';
+        ctx.fillStyle = '#000';
+        ctx.fillText('>', 0, 40);
+        ctx.fillText('Y', 25, 40);
+        ctx.fillText('K', 48, 40);
 
-            ctx.font = '30px Arial';
-            ctx.fillStyle = '#000';
-            
-            if (showCursor) {
-                ctx.fillRect(78, 40, 15, 2);
-            }
+        ctx.font = '30px Arial';
+        ctx.fillStyle = '#000';
 
-            ctx.font = '20px Arial';
-            ctx.fillText('shroot.dev', 0, 65);
+        if (showCursor) {
+          ctx.fillRect(78, 40, 15, 2);
         }
 
-        function animateCursor() {
-            showCursor = !showCursor;
-            drawLogo();
-        }
+        ctx.font = '20px Arial';
+        ctx.fillText('shroot.dev', 0, 65);
+      }
 
-        function redirectToShrootDev() {
-            window.location.href = 'https://shroot.dev';
-        }
-
-        canvas.addEventListener('click', redirectToShrootDev);
-
+      function animateCursor() {
+        showCursor = !showCursor;
         drawLogo();
-        setInterval(animateCursor, 500);
+      }
+
+      function redirectToShrootDev() {
+        window.location.href = 'https://shroot.dev';
+      }
+
+      canvas.addEventListener('click', redirectToShrootDev);
+
+      drawLogo();
+      setInterval(animateCursor, 500);
     </script>
     <div class="socials">
       {{ range .Site.Params.Social }}
@@ -63,8 +65,8 @@
       {{ end }}
     </div>
     <div class="btn">
-      
-      <a class="toHome" href="/posts/">{{ i18n "enter" }}</a>
+
+      <a class="toHome" href="{{"/posts/" |absURL}}">{{ i18n "enter" }}</a>
     </div>
   </div>
   <footer>
@@ -74,14 +76,19 @@
       {{ end }}
       {{ if (and .Site.Params.policeRecordNumber .Site.Params.policeRecordProvince)}}
       <span>
-        <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode={{.Site.Params.policeRecordNumber}}" target="_blank">
-          <img class="beian" src="{{"/img/beian.png"|absURL}}" alt="">{{.Site.Params.policeRecordProvince}}公网安备 {{.Site.Params.policeRecordNumber}}号
+        <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode={{.Site.Params.policeRecordNumber}}"
+          target="_blank">
+          <img class="beian" src="{{" /img/beian.png"|absURL}}" alt="">{{.Site.Params.policeRecordProvince}}公网安备
+          {{.Site.Params.policeRecordNumber}}号
         </a>
       </span>
       {{ end }}
     </div>
   </footer>
+  <script type="text/javascript" src="{{ "/js/baidu.js" |absURL }}" async="async"></script>
+  
 </body>
-<script type="text/javascript" src="{{ "/js/baidu.js" |absURL }}" async="async"></script>
+
 <!-- <script type="text/javascript" src="{{ "/js/console.js" |absURL }}" async="async"></script> -->
+
 </html>
