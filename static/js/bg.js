@@ -14,7 +14,7 @@ const bgCtx = bgCanvas.getContext('2d');
 bgCanvas.width = window.innerWidth;
 bgCanvas.height = window.innerHeight;
 
-const particleCount = 100;
+const particleCount = 50;
 const particles = [];
 const mouse = { x: null, y: null };
 particles.push(mouse);
